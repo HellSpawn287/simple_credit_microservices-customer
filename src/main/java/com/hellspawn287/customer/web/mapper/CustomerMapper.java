@@ -9,6 +9,7 @@ import org.mapstruct.factory.Mappers;
 public interface CustomerMapper {
     CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
 
+    //    @Mapping(target = "customerURL", ignore = true)
     CustomerDTO customerToCustomerDTO(CustomerEntity customerEntity);
 
     CustomerEntity customerDTOToCustomer(CustomerDTO customerDTO);
